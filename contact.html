@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="coursework.html">Coursework</a>
+      <a href="contact.html" class="active">Contact</a>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out for design inquiries, collaborations, or questions about my coursework.</p>
+
+    <div style="margin-bottom: 25px;">
+      <p><strong>Email:</strong> ariannasalumbides@gmail.com</p>
+      <p><strong>Socials:</strong> <a href="https://github.com">GitHub</a> | <a href="instagram.com/novarece/">instagram</a> |
+    </div>
+
+    <!-- Frontend-Only Form -->
+    <form action="#" method="get" onsubmit="alert('Message submitted (Frontend Demo Only)'); return false;">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your full name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+	<script>
+			const themeBtn = document.querySelector('#themeBtn');
+
+		if (themeBtn) {
+		  themeBtn.addEventListener('click', function () {
+			document.body.classList.toggle('dark-mode');
+		  });
+		}
+
+		const contactForm = document.querySelector('#contactForm');
+		const feedback = document.querySelector('#formFeedback');
+
+		if (contactForm) {
+		  contactForm.addEventListener('submit', function (event) {
+			event.preventDefault();
+			feedback.textContent = 'Message sent! Thank you.';
+			contactForm.reset();
+		  });
+		}
+	</script>
+</body>
+</html>

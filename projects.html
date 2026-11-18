@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | novarece</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>novarece</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="coursework.html">Coursework</a>
+      <a href="contact.html">Contact</a>
+      <button id="themeBtn">Dark Mode</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>My Creative Projects</h2>
+    <p>These are three creative projects from my YouTube channel (novarece):</p>
+
+    <div class="card">
+      <img src="https://img.youtube.com/vi/4Dtq_gAjO54/mqdefault.jpg" alt="Obey me love show quiz Parody">
+      <h3>Obey me (love show) quiz [Parody]</h3>
+      <p>A parody animation featuring synchronized voice lines and character reactions.</p>
+      <a href="https://youtu.be/4Dtq_gAjO54?si=eC8aI6L0MH9H8gR9" target="_blank">Watch on YouTube</a>
+    </div>
+
+    <div class="card">
+      <img src="https://img.youtube.com/vi/02A3FOG-8D8/mqdefault.jpg" alt="Get Down Obey Me">
+      <h3>Get Down [Obey Me]</h3>
+      <p>A short music animation focusing on timing and character poses.</p>
+      <a href="https://www.youtube.com/watch?v=02A3FOG-8D8" target="_blank">Watch on YouTube</a>
+    </div>
+
+    <div class="card">
+      <img src="https://img.youtube.com/vi/gVxz88QMRnQ/mqdefault.jpg" alt="Dusk speedpaint">
+      <h3>Dusk (speedpaint)</h3>
+      <p>A video showing my process for a digital illustration from lines to colors.</p>
+      <a href="https://youtu.be/gVxz88QMRnQ?si=4EWaVyXS29I-vGri" target="_blank">Watch on YouTube</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 novarece</p>
+  </footer>
+
+<script>
+			const themeBtn = document.querySelector('#themeBtn');
+
+		if (themeBtn) {
+		  themeBtn.addEventListener('click', function () {
+			document.body.classList.toggle('dark-mode');
+		  });
+		}
+
+		const contactForm = document.querySelector('#contactForm');
+		const feedback = document.querySelector('#formFeedback');
+
+		if (contactForm) {
+		  contactForm.addEventListener('submit', function (event) {
+			event.preventDefault();
+			feedback.textContent = 'Message sent! Thank you.';
+			contactForm.reset();
+		  });
+		}
+	</script>
+</body>
+</html>
